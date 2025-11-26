@@ -23,7 +23,8 @@ def secret_santa(array: list):
         if person not in selector:
             secret_santa = random_friend(array)
             if secret_santa == person:
-                secret_santa = random_friend(array)
+                print("No puedes ser tu amigo invisible, Repetiremos la selección.")
+                continue
             else:
                 selector.append(person)
                 array.remove(secret_santa)
